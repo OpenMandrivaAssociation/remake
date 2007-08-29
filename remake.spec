@@ -45,7 +45,7 @@ comprehensible way, and a debugger.
 %doc AUTHORS ChangeLog* COPYING INSTALL NEWS README* TODO
 %attr(755,root,root) %{_bindir}/%{name}
 #%{_datadir}/emacs/site-lisp/mdb.el
-%{_infodir}/*.bz2
+%{_infodir}/*
 %{_mandir}/man1/remake.*
 %{_infodir}/mdb*
 
