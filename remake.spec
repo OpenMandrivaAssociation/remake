@@ -9,7 +9,6 @@ Group:          Development/Other
 Url:            http://bashdb.sourceforge.net/remake/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
 BuildRequires:  readline-devel
-Buildroot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 remake is a patched and modernized version of GNU make utility that
