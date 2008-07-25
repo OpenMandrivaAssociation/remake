@@ -3,7 +3,7 @@
 Summary:        A gnu make version including a debuger
 Name:		remake
 Version:        3.80_0.62
-Release:        %mkrel 2
+Release:        %mkrel 4
 License:        GPLv2+
 Group:          Development/Other
 Url:            http://bashdb.sourceforge.net/remake/
