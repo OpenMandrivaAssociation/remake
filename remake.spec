@@ -3,11 +3,12 @@
 Summary:        A gnu make version including a debuger
 Name:		remake
 Version:        3.80_0.62
-Release:        %mkrel 5
+Release:        %mkrel 6
 License:        GPLv2+
 Group:          Development/Other
 Url:            http://bashdb.sourceforge.net/remake/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
+Patch0:         remake-3.80+dbg-0.62-fix-format-errors.patch
 BuildRequires:  readline-devel
 BuildRequires:	emacs
 Buildroot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -19,13 +20,14 @@ comprehensible way, and a debugger.
 
 %prep
 %setup -qn %{name}-%{oversion}
+%patch0 -p 1
 
 %build
 %configure2_5x
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
+%{__rm} -rf %{buildroot}
 
 %makeinstall_std
 %{__rm} -f %{buildroot}/%{_infodir}/make*
@@ -33,12 +35,12 @@ comprehensible way, and a debugger.
 %find_lang %{name}
 
 %clean
-[ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
+%{__rm} -rf %{buildroot}
 
 %files -f %{name}.lang
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc AUTHORS ChangeLog* COPYING INSTALL NEWS README* TODO
-%attr(755,root,root) %{_bindir}/%{name}
+%{_bindir}/%{name}
 %{_datadir}/emacs/site-lisp/mdb.el
 %{_infodir}/*
 %{_mandir}/man1/remake.*
