@@ -1,17 +1,17 @@
-%define oversion 3.80+dbg-0.62
+%define oversion 3.81+dbg-0.2
 
-Summary:        A gnu make version including a debuger
+Summary:	A gnu make version including a debuger
 Name:		remake
-Version:        3.80_0.62
-Release:        %mkrel 6
-License:        GPLv2+
-Group:          Development/Other
-Url:            http://bashdb.sourceforge.net/remake/
+Version:	3.81_0.2
+Release:	%mkrel 1
+License:	GPLv2+
+Group:		Development/Other
+Url:		http://bashdb.sourceforge.net/remake/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
-Patch0:         remake-3.80+dbg-0.62-fix-format-errors.patch
-BuildRequires:  readline-devel
+Patch0:		remake-3.81+dbg-0.2-format_not_a_string_literal_and_no_format_arguments.patch
+BuildRequires:	readline-devel
 BuildRequires:	emacs
-Buildroot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 remake is a patched and modernized version of GNU make utility that
@@ -20,7 +20,7 @@ comprehensible way, and a debugger.
 
 %prep
 %setup -qn %{name}-%{oversion}
-%patch0 -p 1
+%patch0 -p1
 
 %build
 %configure2_5x
@@ -41,6 +41,5 @@ comprehensible way, and a debugger.
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog* COPYING INSTALL NEWS README* TODO
 %{_bindir}/%{name}
-%{_datadir}/emacs/site-lisp/mdb.el
+%{_datadir}/emacs/site-lisp/mdb.el*
 %{_infodir}/*
-%{_mandir}/man1/remake.*
