@@ -43,3 +43,47 @@ comprehensible way, and a debugger.
 %{_bindir}/%{name}
 %{_datadir}/emacs/site-lisp/mdb.el*
 %{_infodir}/*
+
+
+%changelog
+* Sat Apr 16 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 3.81_0.2-2mdv2011.0
++ Revision: 653311
+- rebuild
+
+* Sun Jun 07 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 3.81_0.2-1mdv2010.0
++ Revision: 383539
+- update to new version 3.81+dbg-0.2
+- Patch0: fix format not a string literal and no format arguments error
+- spec file clean
+
+* Thu Feb 26 2009 Guillaume Rousse <guillomovitch@mandriva.org> 3.80_0.62-6mdv2009.1
++ Revision: 345229
+- rebuild for latest readline
+- fix format errors
+
+* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 3.80_0.62-5mdv2009.0
++ Revision: 260210
+- rebuild
+
+* Fri Jul 25 2008 Thierry Vignaud <tv@mandriva.org> 3.80_0.62-4mdv2009.0
++ Revision: 248346
+- rebuild
+
+* Wed Mar 12 2008 Tomasz Pawel Gajc <tpg@mandriva.org> 3.80_0.62-2mdv2008.1
++ Revision: 187168
+- remove conflicting files with make (#38801)
+- add buildrequires on emacs
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 3.80_0.62-1mdv2008.1
++ Revision: 140746
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - do not hardcode bz2 extension
+
+
+* Wed Feb 28 2007 Tomasz Pawel Gajc <tpg@mandriva.org> 3.80_0.62-1mdv2007.0
++ Revision: 127051
+- Import remake
+
