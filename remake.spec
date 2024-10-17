@@ -6,7 +6,7 @@ Version:	3.81_0.2
 Release:	3
 License:	GPLv2+
 Group:		Development/Other
-Url:		http://bashdb.sourceforge.net/remake/
+Url:		https://bashdb.sourceforge.net/remake/
 Source0:	http://downloads.sourceforge.net/bashdb/%{name}-%{oversion}.tar.bz2
 Patch0:		remake-3.81+dbg-0.2-format_not_a_string_literal_and_no_format_arguments.patch
 BuildRequires:	readline-devel
